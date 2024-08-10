@@ -1,19 +1,19 @@
-// src/components/SignIn.js
-
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'; /*A hook provided by react-router-dom that allows
+ programmatic navigation between routes.*/
 
 const SignIn = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const navigate = useNavigate();
+  const navigate = useNavigate();// A function that allows you to navigate to different routes programmatically within the app.
 
   const handleSignIn = () => {
     alert('Signed in successfully');
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-900">
+    <div className="flex items-center justify-center min-h-screen bg-gray-900"> {/*This outer container centers the sign-in form both vertically and horizontally on the screen.
+  It also sets the background color to dark gray (bg-gray-900).*/}
     <div className="p-8 bg-white  rounded-lg shadow-lg">
       <h2 className="mb-6 text-2xl font-bold text-black">Sign In</h2>
       <form onSubmit={e => { e.preventDefault(); handleSignIn(); }}>
@@ -22,7 +22,7 @@ const SignIn = () => {
           <input
             type="text"
             value={username}
-            onChange={(e) => setUsername(e.target.value)}
+            onChange={(e) => setUsername(e.target.value)} //event handler attribute
             className="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
           />
         </div>
